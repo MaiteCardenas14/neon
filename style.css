@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .formulario {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .formulario::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #00f;
+    animation: recorrer 9s infinite linear;
+  }
+  
+  @keyframes recorrer {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(0) translateX(300px);
+    }
+    50% {
+      transform: translateY(200px) translateX(300px);
+    }
+    75% {
+      transform: translateY(200px) translateX(0);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
